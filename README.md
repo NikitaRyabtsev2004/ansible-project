@@ -1,1 +1,3 @@
 # ansible-project
+
+./run.sh
