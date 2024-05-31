@@ -1,0 +1,10 @@
+- name: Create ansible-worker user
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create ansible-worker user
+      user:
+        name: ansible-worker
+        home: /home/ansible-worker
+        shell: /bin/bash
+        state: present

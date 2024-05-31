@@ -1,0 +1,5 @@
+ansible-playbook -i hosts.ini create_user.yml
+ansible-playbook -i hosts.ini install_git_and_ssh.yml
+ansible-playbook -i hosts.ini clone_repository.yml
+ansible-playbook -i hosts.ini deploy_index_html.yml
+ansible-playbook -i hosts.ini install_nginx.yml

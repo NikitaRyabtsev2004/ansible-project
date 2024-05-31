@@ -1,0 +1,11 @@
+- name: Deploy custom index.html
+  hosts: all
+  become: yes
+  tasks:
+    - name: Copy index.html to the repository directory
+      copy:
+        src: templates/index.html
+        dest: /home/ansible-worker/www/index.html
+        owner: ansible-worker
+        group: ansible-worker
+        mode: '0644'

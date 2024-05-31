@@ -1,0 +1,11 @@
+- name: Clone repository
+  hosts: all
+  become: yes
+  tasks:
+    - name: Clone the repository
+      git:
+        repo: 'https://example.com/repo.git'
+        dest: /home/ansible-worker/www
+        version: master
+        accept_hostkey: yes
+      become_user: ansible-worker
